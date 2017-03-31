@@ -9,23 +9,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
-import javafx.stage.Modality;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-/**
- * @author Colin Amland
- *
- */
 public class Snake extends Application{
 	static Stage classStage = new Stage();
 	
@@ -161,6 +150,8 @@ public class Snake extends Application{
 					if (direction !=Direction.RIGHT)
 						direction = Direction.LEFT;
 					break;
+				default:
+					break;
 				}
 			}
 			moved = false;
@@ -169,7 +160,7 @@ public class Snake extends Application{
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		startGame();
-		Pong.classStage = primaryStage;
+		Snake.classStage = primaryStage;
 	}
 	public static void main(String[] args){
 		launch(args);

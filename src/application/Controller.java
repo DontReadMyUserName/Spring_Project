@@ -71,8 +71,7 @@ public class Controller {
 					}
 					 Process proc = Runtime.getRuntime().exec("java -jar " + fPath);} 
 				catch(Exception ex)
-				{
-				}
+				{}
 			}
          });
 	}
